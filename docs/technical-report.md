@@ -125,8 +125,7 @@ North) of a vector $\mathbf{a}$.
   the tilt of the phone, so it vanishes when the phone is held upright: $\mathbf{f}_1$ becomes
   undefined.
 * **Fallback.** The right axis then remains horizontal and perpendicular to the walk, so
-  forward is $\mathbf{f}_2 = (\mathbf{e}_z \times \mathbf{x}_w)^{h} / \lVert \cdot \rVert
-  = (-x_{w,N},\ x_{w,E}) / \lVert \cdot \rVert$.
+  forward is $`\mathbf{f}_2 = (\mathbf{e}_z \times \mathbf{x}_w)^{h} / \lVert \cdot \rVert = (-x_{w,N},\ x_{w,E}) / \lVert \cdot \rVert`$.
 * **Blend.** With $\omega = \mathrm{clamp}\big((c - 0.17)/0.17,\ 0,\ 1\big)$, the walking
   direction is $\mathbf{f} = \omega\,\mathbf{f}_1 + (1-\omega)\,\mathbf{f}_2$. The weight goes from
   1 to 0 between about 70° and 80° of tilt ($\cos 70° \approx 0.34$, $\cos 80° \approx 0.17$).
