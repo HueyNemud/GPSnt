@@ -127,13 +127,13 @@ North) of a vector $\mathbf{a}$.
 * **Fallback.** The right axis then remains horizontal and perpendicular to the walk, so
   forward is $\mathbf{f}_2 = (\mathbf{e}_z \times \mathbf{x}_w)^{h} / \lVert \cdot \rVert
   = (-x_{w,N},\ x_{w,E}) / \lVert \cdot \rVert$.
-* **Blend.** With $\omega = \operatorname{clamp}\big((c - 0.17)/0.17,\ 0,\ 1\big)$, the walking
+* **Blend.** With $\omega = \mathrm{clamp}\big((c - 0.17)/0.17,\ 0,\ 1\big)$, the walking
   direction is $\mathbf{f} = \omega\,\mathbf{f}_1 + (1-\omega)\,\mathbf{f}_2$. The weight goes from
   1 to 0 between about 70° and 80° of tilt ($\cos 70° \approx 0.34$, $\cos 80° \approx 0.17$).
   Unlike Euler angles, this has no singularity and no jump (unit-tested from −30° to 100°).
 
 The heading of a step is the **circular mean** of $\mathbf{f}$ over all orientation samples since
-the previous step: $\theta_k = \operatorname{atan2}\big(\sum f_E,\ \sum f_N\big)$. This removes
+the previous step: $\theta_k = \mathrm{atan2}\big(\sum f_E,\ \sum f_N\big)$. This removes
 most of the periodic swing of the arm and avoids the 359°/1° wrap-around problem of an
 arithmetic mean ([`orientation.ts`](../app/lib/nav/orientation.ts)).
 
@@ -252,7 +252,7 @@ by $N = 500$ weighted samples $\{\mathbf{x}_k^{(i)}, w_k^{(i)}\}$: this is the
    $1/N$.
 4. **Estimate.** The displayed position, bias and scale are weighted means,
    $\hat{\mathbf{p}} = \sum_i w^{(i)} \mathbf{p}^{(i)}$, and the uncertainty radius is
-   $\sigma = \sqrt{(\operatorname{Var} p_x + \operatorname{Var} p_y)/2}$. The bias is averaged
+   $\sigma = \sqrt{(\mathrm{Var}\,p_x + \mathrm{Var}\,p_y)/2}$. The bias is averaged
    arithmetically, which is valid because its spread stays small (a few degrees).
 
 The pseudo-random generator is seeded (mulberry32, normals by the polar Box–Muller method):
