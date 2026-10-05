@@ -1,0 +1,27 @@
+name: Field report
+description: Share how GPSn't behaved during a real walk
+labels: [field report]
+body:
+  - type: textarea
+    id: walk
+    attributes:
+      label: The walk
+      description: Environment (quarry, building, cave…), distance, duration, how the phone was held, magnetic compass on or off.
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: How did it go?
+      description: Typical error at your fixes, learnt bias and step scale (details panel), map conflicts, anything surprising.
+    validations:
+      required: true
+  - type: input
+    id: setup
+    attributes:
+      label: GPSn't version, phone model, Android version
+  - type: textarea
+    id: recording
+    attributes:
+      label: Sensor recording
+      description: Optional. Only attach it if you are allowed to share the positions and the map publicly.

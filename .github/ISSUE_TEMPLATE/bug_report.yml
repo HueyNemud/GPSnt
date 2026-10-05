@@ -1,0 +1,29 @@
+name: Bug report
+description: Something does not work as expected
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What you did, what you expected, what happened instead.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: GPSn't version
+      description: Settings → About
+      placeholder: "0.1.0"
+    validations:
+      required: true
+  - type: input
+    id: phone
+    attributes:
+      label: Phone model and Android version
+      placeholder: "Pixel 8, Android 16"
+  - type: textarea
+    id: recording
+    attributes:
+      label: Sensor recording, screenshots, logs
+      description: For tracking problems, a sensor recording helps a lot (Settings → Record sensors). Only attach what you are allowed to share publicly.

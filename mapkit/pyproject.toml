@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gpsnt-mapkit"
+description = "Turns a map image into a GPSn't map pack (tiles + wall mask)"
+license = "AGPL-3.0-or-later"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24", "pillow>=10", "scipy>=1.10"]
+dynamic = ["version"]
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[project.scripts]
+gpsnt-mapkit = "gpsnt_mapkit.__main__:main"
+
+[tool.setuptools]
+packages = ["gpsnt_mapkit"]
+
+[tool.setuptools.dynamic]
+version = { attr = "gpsnt_mapkit.__version__" }
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

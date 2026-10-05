@@ -1,0 +1,47 @@
+{
+  "name": "gpsnt",
+  "version": "0.1.0",
+  "main": "index.ts",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo run:android",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "replay": "vite-node scripts/replay.ts",
+    "dev": "expo start --dev-client",
+    "dev:tunnel": "expo start --dev-client --tunnel",
+    "build:dev": "../build.sh --dev",
+    "build:release": "../build.sh",
+    "simulate": "vite-node scripts/simulate.ts",
+    "ios": "expo run:ios"
+  },
+  "dependencies": {
+    "expo": "~54.0.25",
+    "expo-asset": "^12.0.10",
+    "expo-dev-client": "~6.0.21",
+    "expo-file-system": "~19.0.19",
+    "expo-sensors": "^15.0.7",
+    "expo-sharing": "~14.0.7",
+    "expo-status-bar": "~3.0.8",
+    "leaflet": "^1.9.4",
+    "react": "19.1.0",
+    "react-native": "0.81.5",
+    "react-native-safe-area-context": "^5.6.2",
+    "react-native-webview": "13.15.0"
+  },
+  "devDependencies": {
+    "@expo/ngrok": "^4.1.3",
+    "@types/node": "^24.10.1",
+    "@types/react": "~19.1.0",
+    "typescript": "~5.9.2",
+    "vitest": "^3.2.7"
+  },
+  "private": true,
+  "license": "AGPL-3.0-or-later",
+  "description": "GPSn't: navigation without GPS, by dead reckoning on an offline map",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HueyNemud/GPSnt.git",
+    "directory": "app"
+  }
+}
