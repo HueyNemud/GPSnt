@@ -1,0 +1,53 @@
+# Dependencies
+node_modules/
+
+# Expo
+.expo/
+web-build/
+expo-env.d.ts
+.metro-health-check*
+
+# Generated native projects (expo prebuild)
+/app/android/
+/app/ios/
+/app/modules/*/android/build/
+.kotlin/
+
+# Map pack built by the map kit (see docs/map-packs.md)
+/app/map-pack/
+/app/map-pack.tmp/
+
+# Your own maps: only the demo map is versioned
+/maps/*
+!/maps/demo/
+
+# Build outputs
+/dist/
+
+# Python
+__pycache__/
+*.egg-info/
+.venv/
+.pytest_cache/
+
+# Signing material
+*.jks
+*.keystore
+!debug.keystore
+*.p8
+*.p12
+*.key
+*.pem
+*.mobileprovision
+
+# Logs, OS, editors
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+.DS_Store
+*.tsbuildinfo
+.env*.local
+*.orig.*
+
+# Sensor recordings, exported paths and replay traces
+gpsnt-*.json
